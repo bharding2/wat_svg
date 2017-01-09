@@ -1,0 +1,69 @@
+.Form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Label {
+  width: 100%;
+  max-width: 20em;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.Input {
+  flex-grow: 1;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-weight: 300;
+  display: block;
+  margin: 0;
+  border: none;
+  padding: 0.5em 0;
+  line-height: 1;
+  transition: border-color 0.2s;
+}
+
+.Input:focus {
+  outline: none;
+  border-color: hsl(0, 0%, 25%);
+}
+
+.Icon {
+  width: 1rem;
+  order: -1;
+  transition: all 0.2s;
+  stroke-dasharray: 0, 20;
+  stroke-dashoffset: -14.142;
+}
+
+.Icon path {
+  stroke: black;
+  stroke-width: 1px;
+  fill: none;
+}
+
+.Input:focus + .Icon {
+  stroke-dasharray: 28.284, 20;
+  stroke-dashoffset: 0;
+}
+
+.Line {
+  width: 100%;
+  height: 2px;
+  stroke: hsl(0, 0%, 75%);
+  margin-left: 1rem;
+}
+
+.Line .focus {
+  stroke: black;
+  transition: all 0.2s;
+  stroke-dasharray: 0, 20;
+  stroke-dashoffset: -20;
+}
+
+.Input:focus ~ .Line .focus {
+  stroke-dasharray: 40, 0;
+  stroke-dashoffset: 0;
+}
