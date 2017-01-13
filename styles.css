@@ -67,3 +67,13 @@
   stroke-dasharray: 40, 0;
   stroke-dashoffset: 0;
 }
+
+.Bear {
+  /*width: 181px;*/
+}
+
+.Bear path {
+  stroke: black;
+  stroke-width: 1px;
+  fill: none;
+}
